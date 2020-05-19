@@ -108,25 +108,37 @@ for(int i=0; i<r2; i++)
                          cout<<endl<<endl;
                          }};
 };
-void Multiplication(){
+void Multiplication() {
     //To multiply two matrix
-//To initialize an array
-float mult[10][10]={0};
-if(c1!=r2){
-    cout<<"Error! c1 is not equal r2"<<endl;//TheMatrices();
-    //Multiplication(); }
-    }else{
-        cout<<"The multiplication="<<endl;
-    for(int i=0; i<r1; i++)
-    {for(int j=0; j<c2; j++)
-    for(int k=0; k<c1; k++ )
-    {mult[i][j] += A[i][k]*B[k][j];
-    }}
-    };
-    for (int i=0;i<r1;i++)
-    {for(int j=0; j<c2;j++)
-    cout<<" "<<mult[i][j];
-    if(j==c2-1)
-    cout<<endl<<endl;}
+    double mult[10][10];
+    if (c1 != r2) {
+        cout << "Error! c1 is not equal r2" << endl;
+       TheMatrices();
+        Multiplication();
+    }
 
-};
+    else {
+        for (int i = 0; i < r1; i++)
+        {
+            for (int j = 0; j < c2; j++) {
+                for (int k = 0; k < c1; k++)
+                {
+                    mult[i][j] = A[i][k] * B[k][j];
+                }
+            }
+        }
+        cout << endl << "The multiplication=" << endl;
+        for (int i = 0; i < r2; i++)
+        {
+            for (int j = 0; j < c2; j++)
+            {
+                cout << " " << mult[i][j];
+                if (j == c2 - 1)
+                    cout << endl << endl;
+            }
+        }
+
+    };
+
+   }
+    
